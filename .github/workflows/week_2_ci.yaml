@@ -30,3 +30,8 @@ jobs:
         run: |
           docker run -d --name auth-container -p 50051:50051 auth:v1
           sleep 5
+      
+      - name: Cleanup
+        run: |
+          docker stop auth-container
+          docker rm auth-container
