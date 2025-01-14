@@ -34,7 +34,7 @@ func (s *server) Get(ctx context.Context, req *desc.GetRequest) (*desc.GetRespon
 		User: &desc.User{
 			Id: req.GetId(),
 			Info: &desc.UserInfo{
-				Name:            gofakeit.Name(),
+				Name:            "New Name",
 				Email:           gofakeit.Email(),
 				Password:        gofakeit.Password(true, true, true, true, false, 5),
 				PasswordConfirm: gofakeit.RandString([]string{"access", "failed"}),
